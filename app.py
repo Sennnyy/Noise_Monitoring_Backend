@@ -67,7 +67,7 @@ ALLOWED_EXTENSIONS = {'wav', 'mp3', 'm4a'}
 MAX_CONTENT_LENGTH = 16 * 1024 * 1024  # 16 MB
 
 # MONGODB SETUP
-MONGO_URI = os.environ.get("MONGO_URI", "mongodb+srv://olsenparaiso4_db_user:paradise10032003@noisemonitoring.chvtlws.mongodb.net/?appName=NoiseMonitoring")
+MONGO_URI = os.environ.get("MONGO_URI")
 mongo_client = None
 db = None
 predictions_collection = None
