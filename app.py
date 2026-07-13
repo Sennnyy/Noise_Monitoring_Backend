@@ -490,6 +490,15 @@ async def custom_http_exception_handler(request: Request, exc: HTTPException):
 
 
 # API ENDPOINTS
+@app.get('/')
+async def root():
+    return {
+        'message': 'ZonoTrack Noise Monitoring API is running!',
+        'docs': '/docs',
+        'status': 'healthy'
+    }
+
+
 @app.post('/api/predict')
 async def predict(file: UploadFile = File(...)):
     if kmeans_model is None:
